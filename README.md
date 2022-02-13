@@ -20,9 +20,7 @@ For production:
 
 `npm export`  
 
-manually edit index.html in prod folder to the correct minimized styles and javascript.  
-
-`npm compress`
+manually edit index.html in docs folder to the correct minimized styles and javascript.  
 
 # License
 This application is licensed under [GNU/GPL3 license](LICENSE)

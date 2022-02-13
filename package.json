@@ -7,7 +7,6 @@
     "tw-elements": "^1.0.0-alpha10"
   },
   "scripts": {
-    "export": "mkdir -p prod && cp ./node_modules/tw-elements/dist/js/index.min.js ./prod/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./prod/index.min.js.map && npx tailwindcss -i ./src/input.css -o ./prod/main.min.css --minify && cp ./src/index.html ./prod/index.html && minify ./src/ui.js > ./prod/ui.min.js",
-    "compress": "bread-compressor prod"
+    "export": "mkdir -p docs && cp ./node_modules/tw-elements/dist/js/index.min.js ./docs/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./docs/index.min.js.map && npx tailwindcss -i ./src/input.css -o ./docs/main.min.css --minify && cp ./src/index.html ./docs/index.html && minify ./src/ui.js > ./docs/ui.min.js"
   }
 }
