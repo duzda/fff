@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "minify": "^8.0.3",
+    "tailwindcss": "^3.0.19"
+  },
+  "dependencies": {
+    "tw-elements": "^1.0.0-alpha10"
+  },
+  "scripts": {
+    "export": "mkdir -p prod && cp ./node_modules/tw-elements/dist/js/index.min.js ./prod/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./prod/index.min.js.map && npx tailwindcss -i ./src/input.css -o ./prod/main.min.css --minify && cp ./src/index.html ./prod/index.html && minify ./src/ui.js > ./prod/ui.min.js",
+    "compress": "bread-compressor prod"
+  }
+}
