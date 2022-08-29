@@ -13,6 +13,7 @@ Fuck fast fingers! :)
 
 `git clone https://github.com/duzda/fff`  
 `npm install`  
+`npm start`
 
 For developement:
 
@@ -21,8 +22,6 @@ For developement:
 For production:
 
 `npm export`  
-
-manually edit index.html in docs folder to the correct minimized styles and javascript.  
 
 # License
 This application is licensed under [GNU/GPL3 license](LICENSE)

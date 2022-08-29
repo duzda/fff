@@ -22,7 +22,6 @@ timepicker.addEventListener('input.mdb.timepicker', (e) => {
     }
 
     boom_datetime.setHours(time[0], time[1]);
-    console.log(boom_datetime);
 
     changed_time = true;
     boomed = false;
@@ -47,10 +46,8 @@ function deleteRow(e) {
 
 function openAll() {
     let website_inputs = document.getElementsByClassName("website-input");
-    console.log(website_inputs);
     for (let el of website_inputs) {
         if (el.value != "") {
-            console.log(el.value);
             window.open(el.value);
         }
     }
@@ -134,6 +131,10 @@ function load() {
                 website_inputs[i].value = val;
                 i++;
             }
+
+            // Without these the load won't work :)
+            changed_date = true
+            changed_time = true
         });
 
         if (selectedFile) {

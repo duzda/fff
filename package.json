@@ -7,6 +7,8 @@
     "tw-elements": "^1.0.0-alpha10"
   },
   "scripts": {
-    "export": "mkdir -p docs && cp ./node_modules/tw-elements/dist/js/index.min.js ./docs/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./docs/index.min.js.map && npx tailwindcss -i ./src/input.css -o ./docs/main.min.css --minify && cp ./src/index.html ./docs/index.html && minify ./src/ui.js > ./docs/ui.min.js"
+    "start": "cp ./node_modules/tw-elements/dist/js/index.min.js ./src/js/dist/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./src/js/dist/index.min.js.map",
+    "webcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/dist/input.css --watch",
+    "export": "mkdir -p docs/js/dist && mkdir -p docs/css/dist && cp ./node_modules/tw-elements/dist/js/index.min.js ./docs/js/dist/index.min.js && cp ./node_modules/tw-elements/dist/js/index.min.js.map ./docs/js/dist/index.min.js.map && npx tailwindcss -i ./src/css/input.css -o ./docs/css/dist/input.css --minify && cp ./src/index.html ./docs/index.html && minify ./src/js/ui.js > ./docs/js/ui.js"
   }
 }
